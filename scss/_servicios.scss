@@ -1,0 +1,70 @@
+@import 'mixins';
+// _servicios.scss
+.servicios {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: $background-color;
+  background-image: url("../images/fondo-cuero-lineas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+.text-content {
+  flex: 1;
+  color: $text-color;
+  padding: 15px; /* Aumenta el padding para crear espacio alrededor del texto */
+  background-color: rgba(226, 220, 220, 0.8); /* Contenedor con fondo blanco semitransparente */
+  border-radius: 10px; /* Bordes redondeados para un efecto más estético */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra suave al contenedor */
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .card {
+    background-color: $primary-color;
+    border-radius: 10px;
+    @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    padding: 20px;
+    text-align: center;
+    @include transition(transform, $transition-duration);
+    width: 150px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+  

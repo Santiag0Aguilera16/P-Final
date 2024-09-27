@@ -1,0 +1,83 @@
+// _header.scss
+
+header {
+  @include flex-center;
+  justify-content: space-between;
+  background-color: $header-bg-color;
+  padding: 10px 20px;
+
+  .logo {
+    @include flex-center;
+
+    a {
+      @include flex-center;
+      text-decoration: none;
+      color: inherit;
+
+      img {
+        height: 50px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .text-logo {
+    h1,
+    h2 {
+      margin: 0;
+      color: $text-color;
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+
+      li a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+// Media Query para Pantallas Pequeñas (hasta 768px)
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Cambia la dirección del flex a columna */
+    align-items: center; /* Centra los elementos */
+    padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+
+    .logo {
+      margin-bottom: 10px; /* Espacio debajo del logo */
+    }
+
+    nav ul {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      gap: 10px; /* Reduce el espacio entre elementos */
+
+      li a {
+        font-size: 1rem; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+      }
+    }
+  }
+}

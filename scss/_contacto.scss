@@ -1,0 +1,77 @@
+// _contacto.scss
+.contacto {
+  padding: 60px 20px; /* Espaciado superior e inferior, con espaciado horizontal */
+  background-color: #ececec;
+  @include responsive-bg("../images/fondo-cuero-lineas.jpg");
+
+  @include flex-center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  justify-content: center; /* Centra los elementos */
+}
+
+.contact-info, .contact-form {
+  flex: 1 1 300px; /* Flexibilidad de crecimiento y contracción */
+  max-width: 100%; /* Evita que el ancho máximo sobresalga de la pantalla */
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: $semi-transparent-bg;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Espacio entre contenedores */
+
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.contact-form {
+  form {
+    @include flex-center;
+    flex-direction: column;
+
+    label {
+      margin: 10px 0 5px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%; /* Campos ocupan el 100% del ancho del contenedor */
+      box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    }
+
+    button {
+      padding: 10px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #333333; /* Color más claro al pasar el mouse */
+      }
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  .contacto {
+    flex-direction: column; /* Apila los contenedores verticalmente en pantallas pequeñas */
+    align-items: center; /* Centra los contenedores en el eje vertical */
+    padding: 30px 10px; /* Ajuste de padding en pantallas pequeñas */
+  }
+
+  .contact-info, .contact-form {
+    width: 90%; /* Asegura que los contenedores ocupen el 90% del ancho */
+    max-width: none; /* Elimina cualquier restricción de ancho máximo */
+    margin: 10px 0; /* Espacio vertical entre contenedores */
+  }
+
+  .boton-ver-mas {
+    width: 100%; /* Botón ocupa el 100% del ancho */
+    padding: 10px 0;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,77 @@
+// _galeria.scss
+#galeria {
+  padding: 60px 20px;
+  background-color: #ececec;
+  @include responsive-bg("../images/fondo-cuero-lineas.jpg");
+
+  .galeria-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea el contenido en la parte superior */
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .galeria-texto {
+      flex: 1; /* Permite que el texto use el espacio disponible */
+      color: $text-color;
+      padding: 15px;
+      background-color: $semi-transparent-bg;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-right: 30px;
+
+      h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: $text-color;
+        line-height: 1.6;
+        overflow-wrap: break-word; /* Permite que las palabras largas se rompan */
+      }
+    }
+
+    .galeria-imagenes {
+      flex: 1; /* Permite que la galería use el espacio disponible */
+      display: flex;
+      flex-direction: column; /* Asegura que las imágenes se apilen verticalmente */
+      gap: 10px; /* Espacio entre imágenes */
+
+      .carousel-item {
+        img {
+          height: 400px;
+          object-fit: cover;
+          border-radius: 5px; /* Bordes redondeados para las imágenes */
+        }
+      }
+    }
+  }
+
+  // Ajustes responsivos
+  @media (max-width: 768px) {
+    .galeria-container {
+      flex-direction: column;
+
+      .galeria-texto {
+        margin-right: 0;
+        width: 90%;
+        margin-bottom: 20px; /* Añade un margen inferior para separación */
+      }
+
+      .galeria-imagenes {
+        width: 90%;
+        
+        .carousel-item {
+          img {
+            height: 250px; /* Ajuste de altura en pantallas pequeñas */
+            width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+          }
+        }
+      }
+    }
+  }
+}

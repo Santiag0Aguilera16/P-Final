@@ -1,0 +1,74 @@
+// _taller.scss
+.taller {
+    @include flex-center;
+    padding: 2rem;
+    background-color: #dcdcdc;
+    @include responsive-bg("../images/fondo-cuero-lineas.jpg");
+  
+    .taller-content {
+      margin-right: 2rem;
+      width: 45%;
+      color: $text-color;
+      padding: 15px;
+      background-color: $semi-transparent-bg;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-right: 20px;
+  
+      h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $text-color;
+      }
+  
+      p {
+        font-size: 1rem;
+        margin: 1rem 0;
+      }
+    }
+  
+    .taller-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      flex: 1;
+      max-width: 600px;
+  
+      .grid-item {
+        background-color: #000;
+        border-radius: 10px;
+        overflow: hidden;
+  
+        img, video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+  
+      .item-vertical {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+    }
+  }
+  
+  // Media Queries
+  @media (max-width: 768px) {
+    .taller {
+      flex-direction: column;
+      align-items: center;
+  
+      .taller-content {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+  
+      .taller-grid {
+        width: 100%;
+      }
+    }
+  }
+  
