@@ -77,6 +77,11 @@ body {
   height: 100%;
 }
 
+footer {
+  background-color: #a35957;
+  display: flex;
+}
+
 /* Botón "Ver Más" */
 .boton-ver-mas {
   display: inline-block;
@@ -87,7 +92,7 @@ body {
   text-decoration: none;
   border-radius: 5px;
   text-align: center;
- }
+}
 
 .boton-ver-mas:hover {
   background-color: #555;
@@ -102,7 +107,7 @@ body {
   padding: 20px;
   height: 650px; /* Altura fija */
 
-  background-image: url("../images/fondo-cuero-lineas.webp"); /* Ruta de la imagen */
+  background-image: url("../images/fondo-cuero-lineas.jpg"); /* Ruta de la imagen */
   background-size: cover; /* Hace que la imagen cubra todo el fondo */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -125,7 +130,6 @@ body {
 
 .text-content p {
   font-size: 1.3rem;
-
 }
 
 /* Imagen del contenido */
@@ -169,9 +173,22 @@ body {
   }
 
   .boton-ver-mas {
-    width: 100%;                   /* Ancho completo en móviles */
-    padding: 10px 0;               /* Ajusto padding */
+    width: 100%; /* Ancho completo en móviles */
+    padding: 10px 0; /* Ajusto padding */
     margin-top: 15px;
+  }
+
+  /* Sección Inicio */
+  .content {
+    flex-direction: column;
+  }
+
+  .image-content {
+    order: 1; /* Mueve la imagen debajo del texto */
+  }
+
+  .text-content {
+    order: 0; /* Mantiene el texto arriba */
   }
 }
 
@@ -195,7 +212,7 @@ body {
   padding: 40px 20px;
   background-color: #f5f5f5;
 
-  background-image: url("../images/fondo-cuero-lineas.webp"); /* Ruta de la imagen */
+  background-image: url("../images/fondo-cuero-lineas.jpg"); /* Ruta de la imagen */
   background-size: cover; /* Hace que la imagen cubra todo el fondo */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -227,8 +244,8 @@ body {
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,7 +274,7 @@ body {
 #galeria {
   padding: 60px 20px;
   background-color: #ececec;
-  background-image: url("../images/fondo-cuero-lineas.webp");
+  background-image: url("../images/fondo-cuero-lineas.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -305,34 +322,37 @@ body {
   object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
 }
 
-.btn {
-  margin-top: 20px;
+/* Ajustes responsivos para la sección Galería */
+@media (max-width: 768px) {
+  .galeria-container {
+    flex-direction: column; /* Cambia a columna en móviles */
+    align-items: center;
+  }
+
+  .galeria-texto {
+    margin-right: 0; /* Elimina margen derecho en móviles */
+    width: 90%; /* Ancho ajustado para móviles */
+  }
+
+  .galeria-imagenes {
+    width: 90%; /* Ancho ajustado para móviles */
+  }
+
+  .carousel-item img {
+    height: 250px; /* Altura ajustada en móviles */
+  }
 }
 
 /*-----------------------*/
-/* Responsividad de la galería */
-/* Estilos para pantallas grandes (desktop) */
-@media (min-width: 1024px) {
-  /* Estilos específicos para escritorio */
-}
-
-/* Estilos para tablets (pantallas medianas) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Estilos para tabletas */
-}
-
-/* Estilos para móviles (pantallas pequeñas) */
-@media (max-width: 767px) {
-  /* Estilos para móviles */
-}
-
+/* Sección Taller */
+/* Sección Taller */
 .taller {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
   background-color: #dcdcdc;
 
-  background-image: url("../images/fondo-cuero-lineas.webp"); /* Ruta de la imagen */
+  background-image: url("../images/fondo-cuero-lineas.jpg"); /* Ruta de la imagen */
   background-size: cover; /* Hace que la imagen cubra todo el fondo */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -360,6 +380,7 @@ body {
   font-size: 1rem;
   margin: 1rem 0;
 }
+
 .taller-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -387,14 +408,32 @@ body {
   border-radius: 10px;
 }
 
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .taller {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center; /* Centra los elementos */
+  }
+
+  .taller-content {
+    width: 100%; /* Ancho completo para el contenedor de texto */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-bottom: 20px; /* Espacio debajo del texto */
+  }
+
+  .taller-grid {
+    width: 100%; /* Ancho completo para el grid */
+  }
+}
 
 
-
+/*-----------------------*/
+/* Estilos para Contacto */
 
 .contacto {
   padding: 60px 0;
   background-color: #ececec;
-  background-image: url("../images/fondo-cuero-lineas.webp");
+  background-image: url("../images/fondo-cuero-lineas.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
