@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="/index.html">
+          <img
+            src="/images/logo-header-removebg.png"
+            alt="Logo Cuchillos Artesanales"
+          />
+          <div class="text-logo">
+            <h1>Cuchillos Artesanales</h1>
+            <h2>Osvaldo Aguilera</h2>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/pages/servicios.html">Servicios</a></li>
+          <li><a href="/pages/galeria.html">Galería</a></li>
+          <li><a href="/pages/taller.html">Taller</a></li>
+          <li><a href="/pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="contacto">
+      <div class="contact-info">
+        <h2>Información de Contacto</h2>
+        <p>Teléfono: +54 123 4567890</p>
+        <p>Email: contacto@cuchillosartesanales.com</p>
+        <p>Dirección: Calle 123, Cordoba, Argentina</p>
+        <p>Horario: Lunes a Viernes de 9:00 a 1:00</p>
+      </div>
+
+      <div class="contact-form">
+        <h2>Contáctanos</h2>
+        <form>
+          <label for="phone">Teléfono:</label>
+          <input type="text" id="phone" name="phone" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
